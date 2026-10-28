@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resale-title-builder"
+version = "0.1.0"
+description = "Local-first CLI for eBay/Amazon resellers to build listing titles from item attributes, with character counts, keyword hints, CSV logging, and dry-run mode."
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Asdale Dynamics, LLC"}]
+keywords = ["ebay", "amazon", "reselling", "listing", "cli"]
+
+[project.scripts]
+resale-title-builder = "resale_title_builder.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["resale_title_builder*"]
